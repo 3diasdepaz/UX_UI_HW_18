@@ -50,3 +50,55 @@ nav {
 footer ul li {
  align-items: center;   
 }
+
+.flexContainer {
+    display: flex;
+
+}
+
+div.workGrid {
+    width: 33%;
+    margin: auto;
+    display: grid;
+  }
+
+
+.item1 {
+grid-area: myArea;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "About" "Work" "Skills" "Contact" ;
+    grid-template-columns: auto auto auto auto ;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: whitesmoke;
+    }
+    column {
+        width: 100%;   
+    }
+    .topnav a {
+        float: none;
+        width: 100%;
+      }
+    
+    display: flex;
+    flex-direction: column;
+
+    div.workGrid {
+        width: 100%;
+        margin: 0px 5%; 
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "About"
+        "Work"
+        "Skills"
+        "Contact"
+        ;
+    }
+  }
+
